@@ -1,0 +1,84 @@
+/* Making the articles in the carousel responsive */
+/* The default value of the font size of the article if it isn't defined in props on App.js */
+.responsive_article_title{
+    font-size: 3em;
+}
+
+.responsive_article_author{
+    font-size: 2em;
+}
+/* This media screen only works if the fontSize value isn't defined in the App.js */
+@media screen and (max-width: 1175px){
+    .responsive_article_title{
+        font-size: 2em;
+    }
+    .responsive_article_author{
+        font-size: 1em;
+    }
+}
+
+/* Input style */
+
+.input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 430px;
+    height: 20px;
+    padding: 1em;
+    font-family: "Playfair Display", serif;
+    font-size: 1em;
+    text-align: start;
+    border: 1px solid #b7b7b7;
+}
+.textarea_input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 430px;
+    height: 200px;
+    padding: 1em;
+    font-family: "Playfair Display", serif;
+    font-size: 1em;
+    text-align: start;
+    border: 1px solid #b7b7b7;
+}
+
+.submit_button{
+    font-family: "Playfair Display", serif;
+    width: 100px;
+    height: 50px;
+    background-color: #c7a3a5;
+    color: #ffffff;
+    padding: 1em;
+    border: none;
+    font-size: 1em;
+}
+
+.submit_button:hover{
+    cursor: pointer;
+    background-color:#c19b9d;
+}
+
+.whatsapp_button{
+    display: flex;
+    flex-direction: flex-start;
+    font-family: "PT Sans", sans-serif;
+    width: 175px;
+    height: 50px;
+    padding: 0.5em;
+    font-size: 1em;
+    background-image: url('./img/whatsapp_icon.png');
+    background-position: right;
+    background-size: 30% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: #2aa81a;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.whatsapp_button:hover{
+    cursor: pointer;
+}
