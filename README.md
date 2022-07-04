@@ -78,6 +78,12 @@ Install React-Animate-On-Scroll:
 npm i aos --save
 ```
 
+Install all other minor dependecies:
+```
+cd backend
+pip install -r requirements.txt
+```
+
 ## Installing
 
 Clone the repository:
