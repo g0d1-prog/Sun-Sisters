@@ -85,7 +85,7 @@ function App() {
     else{
       axios({
         method: 'post',
-        url: 'http://127.0.0.1:8000/api/contacts/',
+        url: process.env.REACT_APP_API_URL,
         data:{
           name: name_input.value,
           email: email_input.value,
@@ -116,6 +116,7 @@ function App() {
     <html>
 
       <header>
+        <title>Sun Sisters</title>
       </header>
 
       <body>
