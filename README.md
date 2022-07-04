@@ -96,12 +96,6 @@ https://github.com/g0d1-prog/Sun-Sisters.git
 
 - Gallery file contains all the Sun Sisters images
 - img file contains all images taken from the internet
-
-- To build the frontend and merge with the backend, you'll have to do the following command:
-
-```
-npm run build
-```
 **ONLY ON GIT BASH**
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
