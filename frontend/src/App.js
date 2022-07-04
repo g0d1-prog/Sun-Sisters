@@ -1,6 +1,7 @@
 //Esssentials
 import * as React from 'react'
 import Carousel from 'react-elastic-carousel'
+import axios from 'axios'
 
 //Styles
 import './App.css'
@@ -59,6 +60,54 @@ function App() {
     if (isNaN(phone_input.value) === true){
         alert('Por favor digite apenas números!')
         phone_input.value = ""
+    }
+  }
+
+  //Function to post the contact form via axios API
+  function postContactForm(){
+    const name_input = document.getElementById('name_input')
+    const email_input = document.getElementById('email_input')
+    const phone_number_input = document.getElementById('phone_number_input')
+    const message_input = document.getElementById('message_input')
+
+    if (name_input.value === ''){
+      alert("Por favor, insira um nome!")
+      name_input.value = ""
+    }
+    else if  (email_input.value === ''){
+      alert('Por favor, insira um e-mail!')
+      email_input.value = ""
+    }
+    else if (phone_number_input.value === ''){
+      alert("Por favor, insira um número de telefone para contato!")
+      phone_number_input.value = ""
+    }
+    else{
+      axios({
+        method: 'post',
+        url: 'http://127.0.0.1:8000/api/contacts/',
+        data:{
+          name: name_input.value,
+          email: email_input.value,
+          phone_number: phone_number_input.value,
+          message: message_input.value,
+        },
+        auth:{
+          username: process.env.REACT_APP_API_USERNAME,
+          password: process.env.REACT_APP_API_PASSWORD
+        },
+      })
+      .then(function(){
+        alert('Contato enviado!')
+        name_input.value=""
+        email_input.value=""
+        phone_number_input.value=""
+        message_input.value=""
+      })
+      .catch(function(error){
+        alert('Falha ao enviar contato, por gentileza, veja no console para mais informações')
+        console.log(error.response.data.detail)
+      })
     }
   }
 
@@ -555,13 +604,12 @@ function App() {
           width="100%"
           justifyContent="center"
           alignItems="center"
+          gap="2em"
           flexWrap="wrap"
           >
             <Container
             display="flex"
             flexDirection="column"
-            height="100%"
-            width="100%"
             justifyContent="center"
             alignItems="center"
             >
@@ -581,8 +629,6 @@ function App() {
             <Container
             display="flex"
             flexDirection="column"
-            height="100%"
-            width="100%"
             justifyContent="center"
             alignItems="center"
             >
@@ -647,7 +693,7 @@ function App() {
               type="email"
               placeholder="Insira seu e-mail"
               className={styles.input}
-              id="e-mail_input"
+              id="email_input"
               />
               <input
               type="tel"
@@ -657,6 +703,7 @@ function App() {
               className={styles.input}
               />
               <textarea
+              id="message_input"
               className={styles.textarea_input}
               placeholder="Insira sua mensagem"
               />
@@ -671,6 +718,7 @@ function App() {
               type="submit"
               id="submit_input"
               className={styles.submit_button}
+              onClick= {e => postContactForm(e)}
               ></input>
               <a href="https://wa.me/5511963602658" target="_blank" rel="noreferrer">
                 <input

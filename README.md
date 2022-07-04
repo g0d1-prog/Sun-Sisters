@@ -1,24 +1,10 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="https://i.imgur.com/AZ2iWek.png" alt="Project logo"></a>
+ <img src="frontend/src/img/logo.png" alt="Sun Sisters logo"></a>
 </p>
-<h3 align="center">Project Title</h3>
-
-<div align="center">
-
-[![Hackathon](https://img.shields.io/badge/hackathon-name-orange.svg)](http://hackathon.url.com)
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
-
-</div>
+<h1 align="center">Sun Sisters</h1>
 
 ---
-
-<p align="center"> Few lines describing your project.
-    <br> 
-</p>
 
 ## 📝 Table of Contents
 
@@ -35,89 +21,101 @@
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 
-It is useful to design and follow a specific format when writing a problem statement. While there are several options
-for doing this, the following is a simple and straightforward template often used in Business Analysis to maintain
-focus on defining the problem.
-
-- IDEAL: This section is used to describe the desired or “to be” state of the process or product. At large, this section
-  should illustrate what the expected environment would look like once the solution is implemented.
-- REALITY: This section is used to describe the current or “as is” state of the process or product.
-- CONSEQUENCES: This section is used to describe the impacts on the business if the problem is not fixed or improved upon.
-  This includes costs associated with loss of money, time, productivity, competitive advantage, and so forth.
-
-Following this format will result in a workable document that can be used to understand the problem and elicit
-requirements that will lead to a winning solution.
+Make a fast and simple solution to present the Sun Sisters idea for weddings and parties.
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
-This section is used to describe potential solutions.
+Build the client-side solution with the powerful framework React using the style-props solution that came with this framework to not worry a lot about CSS and improve the performance
 
-Once the ideal, reality, and consequences sections have been
-completed, and understood, it becomes easier to provide a solution for solving the problem.
-
-## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
-
-- What are the dependencies of your project?
-- Describe each limitation in detailed but concise terms
-- Explain why each limitation exists
-- Provide the reasons why each limitation could not be overcome using the method(s) chosen to acquire.
-- Assess the impact of each limitation in relation to the overall findings and conclusions of your project, and if
-  appropriate, describe how these limitations could point to the need for further research.
+Built the server-side solution with the powerfult framework Django, that offers a administration interface to the managers see who wants your services
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
-Write about what you could not develop during the course of the Hackathon; and about what your project can achieve
-in the future.
+Update the site to support better animations and images from the Sun Sisters
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development
-and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
+After install all the dependencies you just need to clone the repository on:
 
 ```
-Give examples
+https://github.com/g0d1-prog/Sun-Sisters
 ```
 
-### Installing
+## Prerequisites
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
+Install Python:
 ```
-Give the example
+https://www.python.org/downloads/
 ```
 
-And repeat
+Install PIP:
+```
+python get-pip.py
+```
+
+Install NodeJs:
+```
+https://nodejs.org/pt-br/
+```
+
+Install Django:
+```
+pip install Django
+```
+
+Install React-Elastic-Carousel:
+```
+npm install --save react-elastic-carousel
+```
+
+Install Axios:
+```
+npm install axios
+```
+
+Install React-Animate-On-Scroll:
+```
+npm i aos --save
+```
+
+## Installing
+
+Clone the repository:
 
 ```
-until finished
+https://github.com/g0d1-prog/Sun-Sisters.git
 ```
 
-## 🎈 Usage <a name="usage"></a>
+## 🎈 Usage Tips<a name="usage"></a>
 
-Add notes about how to use the system.
+- To change any props on the components of the frontend, you have to access the layout file and change the componentStyle
+
+- To change the main frontend with the components, like images, or any texts, is on the App.js file
+
+- To change anything on the backend is on the backend file, but to change and build any API, you'll have to create and edit to the apps of the backend, like the contactForm
+
+- Gallery file contains all the Sun Sisters images
+- img file contains all images taken from the internet
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [ReactJs](https://pt-br.reactjs.org/) - Client-Side Framework
+- [SQLite](https://www.sqlite.org/index.html) - Database
+- [Django](https://www.djangoproject.com/) - Server-side Framework
+- [Python](https://www.python.org/downloads/) - Server-Side Language
+- [React-AOS](https://github.com/michalsnik/aos) - Animation-on-scroll tool
+- [React-Elastic-Carousel](https://www.npmjs.com/package/react-elastic-carousel)
+- [Django_Rest_Framework](https://www.django-rest-framework.org/) - Rest API Tool
+- [Axios](https://axios-http.com/ptbr/docs/api_intro) - Endpoint tool
+- [Vercel](https://vercel.com/) - Deploy tool
+- [NodeJs](https://nodejs.org/en/) - Server Environment Language
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors)
-who participated in this project.
+- [@g0d1-prog](https://github.com/g0d1-prog) - Idea & Work
 
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- Usage of style-props components
+- Usage of Vercel
+- Fast Creation of a Website
