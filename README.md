@@ -95,8 +95,10 @@ https://github.com/g0d1-prog/Sun-Sisters.git
 - To change anything on the backend is on the backend file, but to change and build any API, you'll have to create and edit to the apps of the backend, like the contactForm
 
 - Gallery file contains all the Sun Sisters images
+
 - img file contains all images taken from the internet
-**ONLY ON GIT BASH**
+
+- The frontend is deployed on Vercel and the backend is deployed on Heroku
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
