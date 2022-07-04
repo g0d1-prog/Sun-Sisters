@@ -6,7 +6,7 @@ class Contact(models.Model):
     id = models.AutoField(primary_key=True)
     name= models.CharField(max_length=255)
     email=models.EmailField(max_length=255)
-    phone_number=models.IntegerField()
+    phone_number=models.BigIntegerField()
     message=models.TextField()
     
     class Meta:

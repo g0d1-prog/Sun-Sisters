@@ -85,7 +85,8 @@ function App() {
     else{
       axios({
         method: 'post',
-        url: process.env.REACT_APP_API_URL,
+        url: 'https://sun-sisters-backend.herokuapp.com/api/contacts/',
+        headers: { 'content-type': 'application/json' },
         data:{
           name: name_input.value,
           email: email_input.value,
@@ -106,7 +107,7 @@ function App() {
       })
       .catch(function(error){
         alert('Falha ao enviar contato, por gentileza, veja no console para mais informações')
-        alert(error.response.data.detail)
+        console.log(error.message)
       })
     }
   }
@@ -667,13 +668,11 @@ function App() {
         justifyContent="center"
         gap="3em"
         >
-          <form id="contact_form" className={styles.form}>
             {/* Form section */}
             <Container
             display="flex"
             flexDirection="column"
             height="100%"
-            width="100%"
             gap="2em"
             alignItems="flex-start"
             
@@ -734,7 +733,6 @@ function App() {
               </a>
               </Container>
             </Container>
-          </form>
 
           {/* Final Image Container */}
           <Container
