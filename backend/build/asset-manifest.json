@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1f1da731.css",
-    "main.js": "/static/js/main.a524cef5.js",
+    "main.js": "/static/js/main.81027826.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/final_image_wedding.jpg": "/static/media/final_image_wedding.242ea199742f9999b193.jpg",
     "static/media/couple_infront_of_a_castle.jpg": "/static/media/couple_infront_of_a_castle.116f2094422eac752d23.jpg",
@@ -29,11 +29,11 @@
     "static/media/whatsapp_icon.png": "/static/media/whatsapp_icon.5fc400c4b153fc178ad7.png",
     "index.html": "/index.html",
     "main.1f1da731.css.map": "/static/css/main.1f1da731.css.map",
-    "main.a524cef5.js.map": "/static/js/main.a524cef5.js.map",
+    "main.81027826.js.map": "/static/js/main.81027826.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f1da731.css",
-    "static/js/main.a524cef5.js"
+    "static/js/main.81027826.js"
   ]
 }
