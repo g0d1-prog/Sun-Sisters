@@ -77,6 +77,8 @@
     border-radius: 10px;
     font-weight: bold;
     color: #ffffff;
+    align-items: center;
+    text-align: center;
 }
 
 .whatsapp_button:hover{

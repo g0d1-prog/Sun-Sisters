@@ -106,7 +106,7 @@ function App() {
       })
       .catch(function(error){
         alert('Falha ao enviar contato, por gentileza, veja no console para mais informações')
-        console.log(error.response.data.detail)
+        alert(error.response.data.detail)
       })
     }
   }
@@ -714,27 +714,22 @@ function App() {
               justifyContent="space-between"
               flexWrap="wrap"
               >
-              <input
-              type="submit"
+              <button
               id="submit_input"
               className={styles.submit_button}
               onClick= {e => postContactForm(e)}
-              ></input>
+              >Enviar</button>
               <a href="https://wa.me/5511963602658" target="_blank" rel="noreferrer">
-                <input
-                type="button"
+                <button
                 id="submit_input"
                 className={styles.whatsapp_button}
-                value="Whatsapp Cíntia"
-                ></input>
+                >Whatsapp Cíntia</button>
               </a>
               <a href="https://wa.me/5511995019298" target="_blank" rel="noreferrer">
-                <input
-                type="button"
+                <button
                 id="submit_input"
                 className={styles.whatsapp_button}
-                value="Whatsapp Renata"
-                ></input>
+                >Whatsapp Renata</button>
               </a>
               </Container>
             </Container>
