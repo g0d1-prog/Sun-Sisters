@@ -2,6 +2,9 @@
 import * as React from 'react'
 import Carousel from 'react-elastic-carousel'
 import axios from 'axios'
+import Aos from "aos"
+import 'aos/dist/aos.css'
+import InputMask from "react-input-mask"
 
 //Styles
 import './App.css'
@@ -15,10 +18,6 @@ import Title from './layout/Title'
 import Subtitle from './layout/Subtitle'
 import Line from './layout/Line'
 import Article from './layout/Article'
-
-//Animation-on-scroll lib
-import Aos from "aos"
-import 'aos/dist/aos.css'
 
 //Images
 import flower_image_top_left from './img/flower_image_top_left.png'
@@ -54,15 +53,6 @@ function App() {
     Aos.init({duration: 900})
   },  [])
 
-  // Check if input phone is number
-  function numberHandler(){
-    const phone_input = document.getElementById('phone_number_input')
-    if (isNaN(phone_input.value) === true){
-        alert('Por favor digite apenas números!')
-        phone_input.value = ""
-    }
-  }
-
   //Function to post the contact form via axios API
   function postContactForm(){
     const name_input = document.getElementById('name_input')
@@ -85,7 +75,7 @@ function App() {
     else{
       axios({
         method: 'post',
-        url: 'http://127.0.0.1:8000/api/contacts/',
+        url: process.env.REACT_APP_API_URL,
         data:{
           name: name_input.value,
           email: email_input.value,
@@ -666,74 +656,70 @@ function App() {
         justifyContent="center"
         gap="3em"
         >
-          <form id="contact_form" className={styles.form}>
-            {/* Form section */}
+          {/* Form section */}
+          <Container
+          display="flex"
+          flexDirection="column"
+          height="100%"
+          gap="2em"
+          alignItems="flex-start"
+          >
+            <Title
+            fontSize="2.7em"
+            color="#000000"
+            title="Entrar em contato"
+            />
+            {/* Input is a pure html element because of the function to send it to the server-side API */}
+            <input
+            type="text"
+            placeholder="Insira seu nome"
+            className={styles.input}
+            id="name_input"
+            />
+            <input
+            type="email"
+            placeholder="Insira seu e-mail"
+            className={styles.input}
+            id="email_input"
+            />
+            <InputMask
+            mask="(99) 99999-9999"
+            placeholder="Insira seu telefone"
+            id="phone_number_input"
+            className={styles.input}
+            />
+            <textarea
+            id="message_input"
+            className={styles.textarea_input}
+            placeholder="Insira sua mensagem"
+            />
             <Container
             display="flex"
-            flexDirection="column"
-            height="100%"
+            flexDirection="row"
             width="100%"
-            gap="2em"
-            alignItems="flex-start"
-            
+            justifyContent="center"
+            flexWrap="wrap"
+            gap="1em"
             >
-              <Title
-              fontSize="2.7em"
-              color="#000000"
-              title="Entrar em contato"
-              />
-              {/* Input is a pure html element because of the function to send it to the server-side API */}
-              <input
-              type="text"
-              placeholder="Insira seu nome"
-              className={styles.input}
-              id="name_input"
-              />
-              <input
-              type="email"
-              placeholder="Insira seu e-mail"
-              className={styles.input}
-              id="email_input"
-              />
-              <input
-              type="tel"
-              placeholder="Insira seu telefone"
-              id="phone_number_input"
-              onChange={e => numberHandler(e)}
-              className={styles.input}
-              />
-              <textarea
-              id="message_input"
-              className={styles.textarea_input}
-              placeholder="Insira sua mensagem"
-              />
-              <Container
-              display="flex"
-              flexDirection="row"
-              width="100%"
-              justifyContent="space-between"
-              flexWrap="wrap"
-              >
               <button
               id="submit_input"
               className={styles.submit_button}
               onClick= {e => postContactForm(e)}
               >Enviar</button>
-              <a href="https://wa.me/5511963602658" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/5511963602658" target="_blank" rel="noopener noreferrer">
                 <button
                 id="submit_input"
                 className={styles.whatsapp_button}
                 >Whatsapp Cíntia</button>
               </a>
-              <a href="https://wa.me/5511995019298" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/5511995019298" target="_blank" rel="noopener noreferrer">
                 <button
                 id="submit_input"
                 className={styles.whatsapp_button}
                 >Whatsapp Renata</button>
               </a>
-              </Container>
             </Container>
-          </form>
+          </Container>
 
           {/* Final Image Container */}
           <Container
