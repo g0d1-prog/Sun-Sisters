@@ -12,10 +12,8 @@
 - [Idea / Solution](#idea)
 - [Dependencies / Limitations](#limitations)
 - [Future Scope](#future_scope)
-- [Setting up a local environment](#getting_started)
-- [Usage](#usage)
+- [Usage Tips](#usage)
 - [Technology Stack](#tech_stack)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
 
@@ -32,65 +30,6 @@ Built the server-side solution with the powerfult framework Django, that offers 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
 Update the site to support better animations and images from the Sun Sisters
-
-## 🏁 Getting Started <a name = "getting_started"></a>
-
-After install all the dependencies you just need to clone the repository on:
-
-```
-https://github.com/g0d1-prog/Sun-Sisters
-```
-
-## Prerequisites
-
-Install Python:
-```
-https://www.python.org/downloads/
-```
-
-Install PIP:
-```
-python get-pip.py
-```
-
-Install NodeJs:
-```
-https://nodejs.org/pt-br/
-```
-
-Install Django:
-```
-pip install Django
-```
-
-Install React-Elastic-Carousel:
-```
-npm install --save react-elastic-carousel
-```
-
-Install Axios:
-```
-npm install axios
-```
-
-Install React-Animate-On-Scroll:
-```
-npm i aos --save
-```
-
-Install all other minor dependecies:
-```
-cd backend
-pip install -r requirements.txt
-```
-
-## Installing
-
-Clone the repository:
-
-```
-https://github.com/g0d1-prog/Sun-Sisters.git
-```
 
 ## 🎈 Usage Tips<a name="usage"></a>
 
@@ -116,8 +55,9 @@ https://github.com/g0d1-prog/Sun-Sisters.git
 - [React-Elastic-Carousel](https://www.npmjs.com/package/react-elastic-carousel)
 - [Django_Rest_Framework](https://www.django-rest-framework.org/) - Rest API Tool
 - [Axios](https://axios-http.com/ptbr/docs/api_intro) - Endpoint tool
-- [Vercel](https://vercel.com/) - Deploy tool
-- [NodeJs](https://nodejs.org/en/) - Server Environment Language
+- [Vercel](https://vercel.com/) - Deploy tool (Frontend)
+- [Heroku](https://www.heroku.com) - Deploy tool (Backend)
+- [React-Input-Mask](https://www.npmjs.com/package/react-input-mask) - React Library for Inputs
 
 ## ✍️ Authors <a name = "authors"></a>
 
