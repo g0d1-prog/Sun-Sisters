@@ -96,7 +96,7 @@ function App() {
       })
       .catch(function(error){
         alert('Falha ao enviar contato, por gentileza, veja no console para mais informações')
-        alert(error.response.data.detail)
+        console(error)
       })
     }
   }
