@@ -75,7 +75,7 @@ function App() {
     else{
       axios({
         method: 'post',
-        url: process.env.REACT_APP_API_URL,
+        url: 'https://sun-sisters.herokuapp.com/api/contacts/',
         data:{
           name: name_input.value,
           email: email_input.value,
