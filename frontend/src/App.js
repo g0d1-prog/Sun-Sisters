@@ -75,7 +75,7 @@ function App() {
     else{
       axios({
         method: 'post',
-        url: 'https://sun-sisters.herokuapp.com/api/contacts/',
+        url: process.env.REACT_APP_API_URL,
         data:{
           name: name_input.value,
           email: email_input.value,
@@ -174,12 +174,12 @@ function App() {
         backgroundSize="auto 25vw"
         display="flex"
         alignItems="center"
+        paddingLeft="20vw"
+        paddingRight="20vw"
         >
-          <div data-aos="flip-right">
+          <div data-aos="flip-up">
             <Container 
             justifyContent="center"
-            paddingLeft="20vw"
-            paddingRight="20vw"
             paddingTop="5em"
             paddingBottom="5em"
             flexDirection="column"
