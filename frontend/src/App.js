@@ -732,8 +732,8 @@ function App() {
           >
             <Image 
             src={final_image_wedding}
-            width="400px"
-            height="auto"
+            width="300px"
+            height="535px"
             alt="Festa de casamento com floresta verde por trás para compor o cenário, e pessoas parabenizando o casal que está passando em um corredor das mesmas"
             maxWidth="max-content"
             />
