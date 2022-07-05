@@ -2,6 +2,7 @@
 import * as React from 'react'
 import Carousel from 'react-elastic-carousel'
 import axios from 'axios'
+import InputMask from "react-input-mask";
 
 //Styles
 import './App.css'
@@ -54,15 +55,6 @@ function App() {
     Aos.init({duration: 900})
   },  [])
 
-  // Check if input phone is number
-  function numberHandler(){
-    const phone_input = document.getElementById('phone_number_input')
-    if (isNaN(phone_input.value) === true){
-        alert('Por favor digite apenas números!')
-        phone_input.value = ""
-    }
-  }
-
   //Function to post the contact form via axios API
   function postContactForm(){
     const name_input = document.getElementById('name_input')
@@ -82,10 +74,11 @@ function App() {
       alert("Por favor, insira um número de telefone para contato!")
       phone_number_input.value = ""
     }
+    
     else{
       axios({
         method: 'post',
-        url: 'https://sun-sisters-backend.herokuapp.com/api/contacts/',
+        url: process.env.REACT_APP_API_URL,
         headers: { 'content-type': 'application/json' },
         data:{
           name: name_input.value,
@@ -107,7 +100,7 @@ function App() {
       })
       .catch(function(error){
         alert('Falha ao enviar contato, por gentileza, veja no console para mais informações')
-        console.log(error.message)
+        console.log(error)
       })
     }
   }
@@ -675,7 +668,6 @@ function App() {
             height="100%"
             gap="2em"
             alignItems="flex-start"
-            
             >
               <Title
               fontSize="2.7em"
@@ -695,11 +687,10 @@ function App() {
               className={styles.input}
               id="email_input"
               />
-              <input
-              type="tel"
+              <InputMask
+              mask="(99)99999-9999"
               placeholder="Insira seu telefone"
               id="phone_number_input"
-              onChange={e => numberHandler(e)}
               className={styles.input}
               />
               <textarea

@@ -6,16 +6,16 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('contactForm', '0001_initial'),
+        ('Contatos', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='contact',
+            name='contato',
             options={'ordering': ['name', 'email', 'phone_number', 'message']},
         ),
         migrations.AddField(
-            model_name='contact',
+            model_name='contato',
             name='message',
             field=models.TextField(default='No Message'),
             preserve_default=False,

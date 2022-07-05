@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from .models import Contact
+from .models import Contato
 
-class ContactSerializer(serializers.ModelSerializer):
+class ContatoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Contact
+        model = Contato
         fields = ('id', 'name', 'email', 'phone_number', 'message')
         read_only_fields = ['id']
