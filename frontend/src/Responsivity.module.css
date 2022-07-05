@@ -84,3 +84,12 @@
 .whatsapp_button:hover{
     cursor: pointer;
 }
+
+@media screen and (max-width: 760px){
+    .input{
+        width: 300px;
+    }
+    .textarea_input{
+        width: 300px;
+    }
+}

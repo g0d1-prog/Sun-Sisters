@@ -96,7 +96,7 @@ function App() {
       })
       .catch(function(error){
         alert('Falha ao enviar contato, por gentileza, veja no console para mais informações')
-        console.log(error)
+        console.log(error.responseText)
       })
     }
   }
@@ -106,6 +106,7 @@ function App() {
     <html>
 
       <header>
+        <title>Sun Sisters</title>
       </header>
 
       <body>
@@ -115,7 +116,7 @@ function App() {
         justifyContent="center"
         backgroundImage={flower_image_top_left}
         backgroundPosition="top left"
-        padding="5em"
+        padding="5vw"
         flexDirection="column"
         backgroundSize="25vw 25vw"
         gap="2em"
@@ -139,7 +140,7 @@ function App() {
           width="100%"
           justifyContent="center"
           flexDirection="row"
-          padding='3em'
+          padding='3vw'
           flexWrap="wrap"
           gap='1em'
           display="flex"
@@ -261,8 +262,8 @@ function App() {
           backgroundSize="cover"
           backgroundPosition="center"
           borderRadius="20px"
-          paddingLeft="5em"
-          paddingRight="5em"
+          paddingLeft="5vw"
+          paddingRight="5vw"
           backgroundClip="text"
           webkitBackgroundClip="text"
           gap="2em"
@@ -296,8 +297,8 @@ function App() {
           backgroundSize="cover"
           backgroundPosition="center"
           borderRadius="20px"
-          paddingLeft="5em"
-          paddingRight="5em"
+          paddingLeft="5vw"
+          paddingRight="5vw"
           backgroundClip="text"
           webkitBackgroundClip="text"
           gap="2em"
@@ -368,8 +369,8 @@ function App() {
         <Container
         justifyContent="center"
         gap="1em"
-        paddingLeft="3em"
-        paddingRight="3em"
+        paddingLeft="3vw"
+        paddingRight="3vw"
         paddingTop="5em"
         paddingBottom="5em"
         flexDirection="row"
@@ -662,7 +663,7 @@ function App() {
           flexDirection="column"
           height="100%"
           gap="2em"
-          alignItems="flex-start"
+          alignItems="center"
           >
             <Title
             fontSize="2.7em"
@@ -734,6 +735,7 @@ function App() {
             width="auto"
             height="700px"
             alt="Festa de casamento com floresta verde por trás para compor o cenário, e pessoas parabenizando o casal que está passando em um corredor das mesmas"
+            maxWidth="max-content"
             />
           </Container>
         </Container>

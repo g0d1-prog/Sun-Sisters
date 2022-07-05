@@ -6,7 +6,8 @@ function Image(props) {
         height:props.height,
         width: props.width,
         borderRadius: props.borderRadius,
-        transform:props.transform //Property only to the element flower around to be around of Renata's image
+        transform:props.transform, //Property only to the element flower around to be around of Renata's image
+        maxWidth: props.maxWidth,
     }
   return (
     <img data-aos={props.dataAos}src={props.src} alt={props.alt} style={imageStyle}></img>
