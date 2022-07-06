@@ -15,7 +15,8 @@ class Contato(models.Model):
     name= models.CharField(verbose_name="Nome", max_length=255)
     email=models.EmailField(verbose_name="E-mail", max_length=255)
     phone_number=models.CharField(verbose_name="Número de telefone", max_length=255)
-    message=models.TextField(blank=True, null = True, verbose_name="Mensagem")
+    event_date = models.DateField(verbose_name="Data do evento", auto_now=False, editable=True)
+    guests_number = models.BigIntegerField(verbose_name="Número de convidados")
     status_field = models.CharField(verbose_name= "Status", max_length=2, choices=STATUS_CHOICES ,default="")
     contact_date = models.DateTimeField(verbose_name="Data de contato", auto_now=True, editable=False)
     
@@ -39,7 +40,7 @@ class Contato(models.Model):
             )
     
     class Meta:
-        ordering = ['name', 'email', 'phone_number', 'message']
+        ordering = ['name', 'email', 'phone_number', 'event_date', 'guests_number']
         
     def __str__(self):
         return "Contato de: " + self.name

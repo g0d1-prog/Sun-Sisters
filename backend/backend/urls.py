@@ -21,3 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('Contatos.urls'))
 ]
+
+admin.site.site_header = "Sun Sisters"
+admin.site.index_title = "Sun Sisters"
+admin.site.site_title = "Admin"
