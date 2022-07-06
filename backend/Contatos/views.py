@@ -11,11 +11,6 @@ from .serializer import ContatoSerializer
 class ContatoAPIView(APIView):
     permission_classes = [IsAuthenticated]
     
-    def get(self, request):
-        contatos = Contato.objects.all()
-        serializer = ContatoSerializer(contatos, many=True)
-        return Response(serializer.data)
-    
     def post(self, request):
         serializer = ContatoSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)

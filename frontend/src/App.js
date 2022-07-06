@@ -58,7 +58,8 @@ function App() {
     const name_input = document.getElementById('name_input')
     const email_input = document.getElementById('email_input')
     const phone_number_input = document.getElementById('phone_number_input')
-    const message_input = document.getElementById('message_input')
+    const event_date_input = document.getElementById('event_date_input')
+    const guests_number_input = document.getElementById('guests_number_input')
 
     if (name_input.value === ''){
       alert("Por favor, insira um nome!")
@@ -72,6 +73,14 @@ function App() {
       alert("Por favor, insira um número de telefone para contato!")
       phone_number_input.value = ""
     }
+    else if (event_date_input.value === ''){
+      alert("Por favor, insira uma data para o evento!")
+      event_date_input.value = ""
+    }
+    else if (guests_number_input.value === ''){
+      alert("Por favor, insira o número de convidados para o evento!")
+      guests_number_input.value = ""
+    }
     else{
       axios({
         method: 'post',
@@ -80,7 +89,8 @@ function App() {
           name: name_input.value,
           email: email_input.value,
           phone_number: phone_number_input.value,
-          message: message_input.value,
+          event_date: event_date_input.value,
+          guests_number: guests_number_input.value,
         },
         auth:{
           username: process.env.REACT_APP_API_USERNAME,
@@ -92,11 +102,11 @@ function App() {
         name_input.value=""
         email_input.value=""
         phone_number_input.value=""
-        message_input.value=""
+        event_date_input.value=""
+        guests_number_input.value=""
       })
       .catch(function(error){
-        alert('Falha ao enviar contato, por gentileza, veja no console para mais informações')
-        console.log(error.responseText)
+        alert('Falha ao enviar contato, por gentileza, contate as Sun Sisters via Whatsapp')
       })
     }
   }
@@ -237,7 +247,7 @@ function App() {
             <div className={styles.responsive_article_title}>
               <Article
               id="test"
-              article='"A decoração ficou deslumbrante! Você superou todas as nossas expectativas! Foi sofisticada, festiva e de bom gosto!"'
+              article='"Foi tudo deslumbrante, você superou todas as expectativas, foi acertiva em tudo, nos deixando tranquilo em todo o evento"'
               color="#000000"
               backgroundColor="#ffffff"
               />
@@ -360,8 +370,7 @@ function App() {
             fontWeight="lighter"
             fontStyle="italic"
             color="#56562c"
-            article="A Sun Sisters é especializada em Assessoria e Gestão de Eventos, sejam eles sociais ou corporativos. Procuramos dar a cada evento um tratamento único, de acordo com as particularidades de cada cliente, alinhadas dentro de um projeto personalizado desenvolvido com todos os fornecedores envolvidos.
-            Assessorias total, parcial ou do dia em casamentos, debutantes mini Wedding, aniversários, corporativos, produção de eventos e serviço de Cantora."
+            article="A Sun Sisters é especializada em Assessoria e Gestão de Eventos, sejam eles sociais ou corporativos. Procuramos dar a cada evento um tratamento único, de acordo com as particularidades de cada cliente, alinhadas dentro de um projeto personalizado desenvolvido com todos os fornecedores envolvidos. Assessorias total, parcial ou do dia em casamentos, debutantes mini Wedding, aniversários, corporativos, produção de eventos."
             />
         </Container>
 
@@ -585,7 +594,7 @@ function App() {
           fontStyle="normal"
           fontSize="1.5em"
           color="#5e5e2f"
-          article="Nossa missão é sermos madrinhas virtuais e caminhar ao lado de muuuuitas pessoas nos preparativos de seus sonhos e torná-los reais e mágicos."
+          article="Nossa missão é sermos madrinhas virtuais e caminhar ao lado de vocês nos preparativos de seus sonhos e torná-los reais e mágicos."
           />
           {/* Image Container inside of the "about" section */}
           <Container
@@ -689,10 +698,22 @@ function App() {
             id="phone_number_input"
             className={styles.input}
             />
-            <textarea
-            id="message_input"
-            className={styles.textarea_input}
-            placeholder="Insira sua mensagem"
+            <Article
+            article="Insira a data para o evento abaixo:"
+            fontWeight="bold"
+            fontStyle="italic"
+            fontSize="20px"
+            />
+            <input
+            type="date"
+            className={styles.input}
+            id="event_date_input"
+            />
+            <input
+            type="number"
+            placeholder="Insira o número de convidados"
+            className={styles.input}
+            id="guests_number_input"
             />
             <Container
             display="flex"
