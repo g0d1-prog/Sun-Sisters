@@ -34,7 +34,6 @@ import corporative_party_service from './img/corporative_party_service.jpg'
 import wedding_service from './img/wedding_service.jpg'
 import sun_sisters_renata from './img/sun_sisters_renata.jpeg'
 import flowers_around from './img/flowers_around.png'
-import flower_image_left from './img/flower_image_left.png'
 import final_image_wedding from './img/final_image_wedding.jpg'
 import sun_sisters_cintia from './img/sun_sisters_cintia.png'
 
@@ -247,7 +246,7 @@ function App() {
             <div className={styles.responsive_article_title}>
               <Article
               id="test"
-              article='"Foi tudo deslumbrante, você superou todas as expectativas, foi acertiva em tudo, nos deixando tranquilo em todo o evento"'
+              article='"Foi tudo deslumbrante, você superou todas as expectativas, foi acertiva em tudo, nos deixando tranquilos em todo o evento"'
               color="#000000"
               backgroundColor="#ffffff"
               />
@@ -658,7 +657,6 @@ function App() {
         width="100%"
         height="100%"
         backgroundColor="#d8d8d8"
-        backgroundImage={flower_image_left}
         backgroundSize="auto 40em"
         backgroundPosition="center left"
         alignItems="center"
